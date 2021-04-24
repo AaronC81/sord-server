@@ -125,6 +125,7 @@ post '/run' do
 
   # Build response
   status_code(sord_output.success ? 200 : 400)
+  headers('Access-Control-Allow-Origin' => '*')
   content_type(:json)
   {
     info: {
